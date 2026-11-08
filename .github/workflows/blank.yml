@@ -30,7 +30,7 @@ jobs:
           cache-dependency-path: build/pnpm-lock.yaml
 
       - name: Install dependencies
-        run: pnpm install --config.ignored-builds=false
+        run: pnpm approve-builds core-js core-js-pure && pnpm install
         working-directory: ./build
 
       - name: Run tests
